@@ -57,7 +57,7 @@ Each object in the JSON file provided by Spotify consists of the following field
 
 I recommend using <a href="colab.research.google.com">Google Colab.</a> I added both the Google Colab notebook, *SpotifyHistorytoCSV.pynb*, and the raw python code, *SpotifyHistorytoCSV.py*.
 
-1. Upload the notebook to Google Colab
-2. Upload the Spotify JSON files directly to the */content/* directory (the default directory when you click the file icon that contains the *sample_data*          folder. Or create a new folder in the content directory to upload them to such as */content/json/*. It doesn't matter where you put them as long as you specify their directory path in the script
-3. Run the script
-4. Download the CSV file that is output to the default */content/* directory
+1. Upload the notebook to Google Colab.
+2. Upload the Spotify JSON files directly to the */content/* directory (the default directory when you click the file icon that contains the *sample_data*          folder. Or create a new folder in the content directory to upload them to such as */content/json/*. It doesn't matter where you put them as long as you specify their directory path in the script.
+3. Run the script.
+4. Download the CSV file that is output to the default */content/* directory.
