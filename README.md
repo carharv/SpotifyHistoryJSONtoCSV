@@ -1,7 +1,9 @@
 # SpotifyHistoryJSONtoCSV
-Python script to convert your Spotify privacy data listening history JSON files to one CSV
+Python script to convert your Spotify privacy data listening history JSON files to one CSV file. 
 
 The goal of this scipt is to extract the relevant details from my listening history and output a csv. The csv can then be imported into <a href="https://github.com/krateng/maloja">Maloja, a self-hosted scrobble database.</a>
+
+However, this script can also be used to easily merge multiple Spotify JSON files and analyze them with Python. 
 
 ### CSV Formatting
 
