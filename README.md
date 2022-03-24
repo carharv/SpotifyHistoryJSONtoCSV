@@ -11,12 +11,14 @@ The format we want to get our listening history is the following:
 <br>`ArtistName,Album,TrackName,day shortMonthAbbr hh:mm`
 <br>`Kanye West,808s & Heartbreak,Heartless,22 Mar 2022 17:55`
 
-### Privacy data
+### Getting your streaming history from Spotify
+
+#### Privacy data
 
 - Request your **privacy data** at Spotify to have access to your history for the past year [here](https://www.spotify.com/us/account/privacy/).
 - Gather your files starting with `StreamingHistoryX.json`.
 
-### Full privacy data (recommended)
+#### Full privacy data (recommended)
 
 > Full privacy data can be obtained by emailing **privacy@spotify.com** and requesting your data since the creation of the account.
 
