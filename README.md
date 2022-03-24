@@ -5,14 +5,6 @@ The goal of this scipt is to extract the relevant details from my listening hist
 
 However, this script can also be used to easily merge multiple Spotify JSON files and analyze them with Python. 
 
-### CSV Formatting
-
-Maloja has a feature that was designed to import listening history from a CSV exported from this <a href="https://benjaminbenben.com/lastfm-to-csv/"> LastFM to CSV converter.</a> This is a great feature that also opens the door to importing listening history from any source as long as it is in the same CSV format that the aforementioned converter uses. 
-
-The format we want to get our listening history is the following:
-<br>`ArtistName,Album,TrackName,day shortMonthAbbr hh:mm`
-<br>`Kanye West,808s & Heartbreak,Heartless,22 Mar 2022 17:55`
-
 ### Getting your streaming history from Spotify
 
 #### Privacy data
@@ -26,6 +18,14 @@ The format we want to get our listening history is the following:
 
 - Request your data by email.
 - Gather your files starting with `endsongX.json`.
+
+### CSV Formatting
+
+Maloja has a feature that was designed to import listening history from a CSV exported from this <a href="https://benjaminbenben.com/lastfm-to-csv/"> LastFM to CSV converter.</a> This is a great feature that also opens the door to importing listening history from any source as long as it is in the same CSV format that the aforementioned converter uses. 
+
+The format we want to get our listening history is the following:
+<br>`ArtistName,Album,TrackName,day shortMonthAbbr hh:mm`
+<br>`Kanye West,808s & Heartbreak,Heartless,22 Mar 2022 17:55`
 
 ### Spotify JSON Structure
 
@@ -57,7 +57,7 @@ Each object in the JSON file provided by Spotify consists of the following field
 
 ### Using the python script
 
-I recommend using <a href="colab.research.google.com">Google Colab.</a> I added both the Google Colab notebook, *SpotifyHistorytoCSV.pynb*, and the raw python code, *SpotifyHistorytoCSV.py*.
+I recommend using <a href="colab.research.google.com">Google Colab.</a> I added both the Google Colab notebook, *SpotifyHistorytoCSV.pynb*, and the raw python code, *SpotifyHistorytoCSV.py* to this repo.
 
 1. Upload the notebook to Google Colab.
 2. Upload the Spotify JSON files directly to the */content/* directory (the default directory when you click the file icon that contains the *sample_data*          folder. Or create a new folder in the content directory to upload them to such as */content/json/*. It doesn't matter where you put them as long as you specify their directory path in the script.
