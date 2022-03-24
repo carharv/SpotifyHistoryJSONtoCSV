@@ -3,6 +3,8 @@ Python script to convert your Spotify privacy data listening history JSON files 
 
 The goal of this scipt is to extract the relevant details from my listening history and output a csv. The csv can then be imported into <a href="https://github.com/krateng/maloja">Maloja, a self-hosted scrobble database.</a>
 
+### CSV Formatting
+
 Maloja has a feature that was designed to import listening history from a CSV exported from this <a href="https://benjaminbenben.com/lastfm-to-csv/"> LastFM to CSV converter.</a> This is a great feature that also opens the door to importing listening history from any source as long as it is in the same CSV format that the aforementioned converter uses. 
 
 The format we want to get our listening history is the following:
@@ -20,3 +22,31 @@ The format we want to get our listening history is the following:
 
 - Request your data by email.
 - Gather your files starting with `endsongX.json`.
+
+### Spotify JSON Structure
+
+Each object in the JSON file provided by Spotify consists of the following fields:
+
+|Field|Description|
+| --- |       --- |
+|ts|This field is a timestamp indicating when the track stopped playing in UTC (Coordinated Universal Time). The order is year, month and day followed by a timestamp in military time|
+|username|This field is your Spotify username.|
+|platform|This field is the platform used when streaming the track (e.g. Android OS, Google Chromecast).|
+|ms_played|This field is the number of milliseconds the stream was played.|
+|conn_country|This field is the country code of the country where the stream was played (e.g. SE - Sweden).|
+|ip_addr_decrypted|This field contains the IP address logged when streaming the track.|
+|user_agent_decrypted|This field contains the user agent used when streaming the track (e.g. a browser, like Mozilla Firefox, or Safari)|
+|master_metadata_track_name|This field is the name of the track.|
+|master_metadata_album_artist_name|This field is the name of the artist, band or podcast.|
+|master_metadata_album_album_name|This field is the name of the album of the track.|
+|spotify_track_uri|A Spotify URI, uniquely identifying the track in the form of “spotify:track:base-62 string” A Spotify URI is a resource identifier that you can enter, for example, in the Spotify Desktop client’s search box to locate an artist, album, or track.|
+|episode_name|This field contains the name of the episode of the podcast.|
+|episode_show_name|This field contains the name of the show of the podcast.|
+|spotify_episode_uri|A Spotify Episode URI, uniquely identifying the podcast episode in the form of “spotify:episode:base-62 string” A Spotify Episode URI is a resource identifier that you can enter, for example, in the Spotify Desktop client’s search box to locate an episode of a podcast.|
+|reason_start|This field is a value telling why the track started (e.g. “trackdone”)|
+|reason_end|This field is a value telling why the track ended (e.g. “endplay”).|
+|shuffle|This field has the value True or False depending on if shuffle mode was used when playing the track.|
+|skipped|This field indicates if the user skipped to the next song|
+|offline|This field indicates whether the track was played in offline mode (“True”) or not (“False”).|
+|offline_timestamp|This field is a timestamp of when offline mode was used, if used.|
+|incognito_mode|This field indicates whether the track was played in incognito mode (“True”) or not (“False”).|
